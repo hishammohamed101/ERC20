@@ -1,66 +1,24 @@
-## Foundry
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+# ERC20 Token Project
+This repository contains the smart contract code and deployment instructions for an ERC20 token built using Solidity and deployed on a testnet using Forge.
 
-Foundry consists of:
+## Overview
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+This project implements a basic ERC20 token (serpentToken) using Solidity. It includes functionalities such as token transfers, allowance management, and owner-specific operations. The token is deployed on a testnet (Sepolia, for example) using Forge CLI.
 
-## Documentation
 
-https://book.getfoundry.sh/
+## Functions:
 
-## Usage
+```transfer```: Transfer tokens from sender to recipient.
+```transferFrom```: Transfer tokens on behalf of a spender (after approval).
+```approve```: Approve spender to spend tokens on behalf of the owner.
+```setTransferLocked```: Toggle transfer lock status (onlyOwner).
 
-### Build
 
-```shell
-$ forge build
-```
+## Deployment
+Prerequisites
+Ensure you have the following set up:
 
-### Test
-
-```shell
-$ forge test
-```
-
-### Format
-
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+Forge CLI installed and configured.
+Ethereum RPC URL for the desired testnet (e.g., Rinkeby).
+Private key of the Ethereum account for deployment.
