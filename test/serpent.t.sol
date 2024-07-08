@@ -59,7 +59,6 @@ contract serpentTokenTest is Test {
         assertEq(finalAllowance, allowance - amount, "Final allowance should be reduced by the transfer amount");
     }
 
-
     function testSetTransferLocked() public {
         // Check initial state
         bool initialLocked = token.locked();
@@ -69,11 +68,11 @@ contract serpentTokenTest is Test {
         token.setTransferLocked(true);
         bool lockedAfterSetTrue = token.locked();
         assertEq(lockedAfterSetTrue, true, "Locked state should be true after setting to true");
+        console.log("i think this is will fail");
 
         // Set lock status to false
         token.setTransferLocked(false);
         bool lockedAfterSetFalse = token.locked();
         assertEq(lockedAfterSetFalse, false, "Locked state should be false after setting to false");
     }
-
 }

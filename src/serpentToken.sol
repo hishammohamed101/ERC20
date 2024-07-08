@@ -11,7 +11,7 @@ contract serpentToken is ERC20, Ownable {
     //Events
     event TransferLocked(bool indexed status);
 
-    constructor() ERC20("serpentToken", "ST") Ownable(msg.sender){
+    constructor() ERC20("serpentToken", "ST") Ownable(msg.sender) {
         _mint(msg.sender, 100 * 10 ** decimals());
         _locked = false;
     }
@@ -21,9 +21,9 @@ contract serpentToken is ERC20, Ownable {
         emit TransferLocked(status);
     }
 
-    function locked() public view returns(bool) {
+    function locked() public view returns (bool) {
         return _locked;
-    } 
+    }
 
     function transfer(address recipient, uint256 amount) public override returns (bool) {
         require(!_locked || msg.sender == owner(), "Transfers are locked");
