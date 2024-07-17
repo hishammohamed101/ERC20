@@ -1,2 +1,4 @@
-serpentTokenTest:testInitialBalanceWithDeployer() (gas: 12384)
-serpentTokenTest:testTransfer() (gas: 38303)
+serpentTokenTest:testInitialBalanceWithDeployer() (gas: 14538)
+serpentTokenTest:testSetTransferLocked() (gas: 22518)
+serpentTokenTest:testTransfer() (gas: 47766)
+serpentTokenTest:testTransferFrom() (gas: 82710)
